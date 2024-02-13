@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'elearningplatform',
     'embed_video',
-    'user_visit',
+    
 
     'whitenoise.runserver_nostatic',
     
