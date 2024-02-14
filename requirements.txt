@@ -1,4 +1,4 @@
-django-crispy-forms
+
 dj-database-url==2.1.0
 Django==4.2.5
 django-database-url==1.0.3
