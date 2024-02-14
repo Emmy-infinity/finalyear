@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import django_heroku
 import dj_database_url
-import django-crispy-forms
+
 
 
 
@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'elearningplatform',
     'embed_video',
-    'crispy_forms',
+    
     
 
     'whitenoise.runserver_nostatic',
@@ -154,7 +154,7 @@ STATICFILES_STORAGE='CANINSTITUTE2.WhiteNoiseStaticFilesStorage'
 
 MEDIA_URL="/media/"
 NEDIA_ROOT=os.path.join(BASE_DIR,'media')
-CRISPY_TEMPLATE_PACK='bootstrap4'
+
 
 # Default primsary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
