@@ -310,6 +310,11 @@
       <header>
          <a href="#" class="fa fa-facebook"></a>
 <a href="#" class="fa fa-twitter"></a>
+          {% if request.user.is_authenticated %}
+           {{user.username}}
+   {% else%}
+     <p><h4>New here please signup</p></h4>
+   {% endif %}
          
        <center> <div class="logo"><img src="{% static 'logo.png' %}" alt="logo" > </div></center>
       
