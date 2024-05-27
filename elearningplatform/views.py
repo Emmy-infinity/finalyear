@@ -1,4 +1,4 @@
-@login_required(login_url='login')
+@login_required(login_url='elearningplatform:login')
 from django.shortcuts import redirect,render
 from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 from django.contrib.auth import login, logout,authenticate
