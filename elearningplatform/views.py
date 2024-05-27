@@ -1,4 +1,4 @@
-@login_required(login_url='elearningplatform:login')
+
 from django.shortcuts import redirect,render
 from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 from django.contrib.auth import login, logout,authenticate
@@ -12,7 +12,7 @@ def home(request):
      return render(request,'caninstitutehome.html',context)
 #def coursemenu(request):
  #   return render(request, 'coursemenu.html')
-
+@login_required(login_url='elearningplatform:login')
 def quizz(request):
     question=Add_Questions.objects.all()
            
