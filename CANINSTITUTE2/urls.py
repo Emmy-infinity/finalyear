@@ -2,13 +2,16 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from django.views.generic import TemplateView
+from django.http import HttpResponse
+
+def favicon_view(request):
+    return HttpResponse(status=204)  # No content response, prevents 400 error
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('elearningplatform.urls')),
     path('account', include('django.contrib.auth.urls')),
-    path('favicon.ico', TemplateView.as_view(template_name='favicon.ico', content_type='image/x-icon')),
+    path('favicon.ico', favicon_view),
 ]
 
 # Serve static files and media files in production
