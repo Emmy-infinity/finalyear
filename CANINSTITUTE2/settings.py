@@ -129,6 +129,8 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),) if os.path.exists(os.path
 # WhiteNoise configuration
 WHITENOISE_USE_FINDERS = True
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+WHITENOISE_AUTOREFRESH = True
+WHITENOISE_ADD_HEADERS_FUNCTION = None
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -138,9 +140,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# CSRF exemption for favicon to prevent 400 errors
-CSRF_FAILURE_VIEW = 'elearningplatform.views.csrf_failure'
 
 # Security settings for production
 if not DEBUG:
