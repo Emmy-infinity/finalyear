@@ -139,6 +139,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# CSRF exemption for favicon to prevent 400 errors
+CSRF_FAILURE_VIEW = 'elearningplatform.views.csrf_failure'
+
 # Security settings for production
 if not DEBUG:
     SECURE_SSL_REDIRECT = True
